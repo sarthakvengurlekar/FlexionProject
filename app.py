@@ -21,8 +21,8 @@ def convert():
 
     try:
         input_value = float(data['input_value'])
-        input_unit = data['input_unit']
-        target_unit = data['target_unit']
+        input_unit = data['input_unit'].lower()
+        target_unit = data['target_unit'].lower()
         student_response = data['student_response']
     except KeyError as e:
         return jsonify({'error': f'Missing field: {e.args[0]}'}), 400
