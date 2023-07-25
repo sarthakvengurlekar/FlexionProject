@@ -21,6 +21,12 @@ pipeline {
                 sh 'docker build -t sarthakvengurlekar10/my_flask_app .'
             }
         }
+
+        stage('Test') {
+            steps {
+                sh 'docker run --rm -v ${WORKSPACE}:/app -w /app $DOCKER_USERNAME/$DOCKER_IMAGE pytest test_app.py'
+            }
+        }
         
         stage('Push Docker Image') {
             steps {
