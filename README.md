@@ -23,7 +23,7 @@ The application is Dockerized and continuously deployed to an EC2 instance using
 ## Installation and Running the App Locally
 
 1. Clone the repository: `git clone https://github.com/sarthakvengurlekar/FlexionProject.git`
-2. Navigate to the project directory: `cd project`
+2. Navigate to the project directory: `cd FlexionProject`
 3. Install necessary dependencies: `pip install -r requirements.txt`
 4. Run the application: `python app.py`
 5. Access the application at `localhost:5000` in a web browser.
