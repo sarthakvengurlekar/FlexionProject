@@ -37,13 +37,7 @@ pipeline {
             }
         }
         
-        // stage('Deploy') {
-        //     steps {
-        //         sshagent(['ec2-key']) {
-        //             sh "ssh -o StrictHostKeyChecking=no $EC2_USERNAME@$EC2_IP 'docker stop $(docker ps -q --filter ancestor=$DOCKER_USERNAME/$DOCKER_IMAGE) || true && docker rm $(docker ps -a -q --filter ancestor=$DOCKER_USERNAME/$DOCKER_IMAGE) || true && docker pull $DOCKER_USERNAME/$DOCKER_IMAGE:latest && docker run -d -p 5000:5000 $DOCKER_USERNAME/$DOCKER_IMAGE:latest'"
-        //         }
-        //     }
-        // }
+
 
         stage('Deploy') {
             steps {
